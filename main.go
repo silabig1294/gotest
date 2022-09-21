@@ -43,4 +43,18 @@ func main() {
 	d = []string{"Sila","Boolerd","Panitan","Siriporn","Lisa","Wanida","Jenny"}
 	sort.Sort(sort.Reverse(sort.StringSlice(d)))
 	fmt.Println("\n", d)
+
+	// e := []float64{85.201, 14.74, 965.25, 125.32, 63.14} // unsorted
+	// sort.Sort(sort.Float64Slice(e))
+	// fmt.Println(e)	// sorted
+	// fmt.Println("Length of Slice: ", sort.Float64Slice.Len(e))	// 5
+	// fmt.Println("123.32 found in Slice at position: ", sort.Float64Slice(e).Search(1000.32))		//	3
+	// fmt.Println("999.15 found in Slice at position: ", sort.Float64Slice(e).Search(965.25))		//	5
+	// fmt.Println("12.14 found in Slice at position: ", sort.Float64Slice(e).Search(14.74))
+	fmt.Println("\n######## SearchInts not works in descending order bot works in ascending order ######## ")    
+	intSlice := []int{55, 54, 53, 52, 51, 50, 48, 36, 15, 5}	// sorted slice in descending
+	sort.Sort(sort.IntSlice(intSlice)) // add this sentences for  SerchInts will work.// if close comment , this sentenses will not work.
+    x := 36
+    pos := sort.SearchInts(intSlice,x)
+    fmt.Printf("Found %d at index %d in %v\n", x, pos, intSlice)
 }
