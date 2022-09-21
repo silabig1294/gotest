@@ -57,4 +57,9 @@ func main() {
     x := 36
     pos := sort.SearchInts(intSlice,x)
     fmt.Printf("Found %d at index %d in %v\n", x, pos, intSlice)
+
+	intSlice2 := []int{55, 54, 53, 52, 51, 50, 48, 36, 15, 5}
+	fmt.Println("\n######## Search works in descending order  ########")	
+	i := sort.Search(len(intSlice2), func(i int) bool { return intSlice2[i] <= x })
+	fmt.Printf("Found %d at index %d in %v\n", x, i, intSlice2)
 }
